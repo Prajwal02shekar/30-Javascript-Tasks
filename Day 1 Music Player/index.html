@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./Style.css" />
+  </head>
+  <body>
+    <main class="Container">
+      <article class="musicPlayer">
+        <nav>
+          <aside class="circle"><i class="fa-solid fa-angle-left"></i></aside>
+          <aside class="circle">
+            <i class="fa-solid fa-bars"></i>
+          </aside>
+        </nav>
+        <img src="./Assets/Jailer Image.jpg" class="songImage" alt="" />
+        <h1>Jailer BGM</h1>
+        <p>Jailer</p>
+        <audio id="song" src="./Assets/jailer_bgm_hard.mp3" ></audio>
+        <input type="range" value="0" id="progress" />
+        <aside class="controls">
+          <article><i class="fa-solid fa-backward"></i></article>
+          <article onclick="playPause()">
+            <i class="fa-solid fa-play" id="controlIcon"></i>
+          </article>
+          <article>
+            <i class="fa-solid fa-forward"></i>
+          </article>
+        </aside>
+      </article>
+    </main>
+  </body>
+  <script src="./file.js"></script>
+  <!-- <script>
+    let progress = document.getElementById("progress");
+    let song = document.getElementById("song");
+    let contolIcon = document.getElementById("controlIcon");
+
+    song.onloadedmetadata = () => {
+      progress.max = song.duration;
+      progress.value = song.currentTime;
+    };
+    function playPause() {
+      if (contolIcon.classList.contains("fa-pause")) {
+        song.pause();
+        contolIcon.classList.remove("fa-pause");
+        contolIcon.classList.add("fa-pause");
+      } else {
+        song.play();
+        contolIcon.classList.add("fa-pause");
+        contolIcon.classList.remove("fa-play");
+      }
+    }
+
+    if(song.play()){
+        setInterval(()=>{
+            progress.value=song.currentTime;
+        },500);
+    }
+
+    progress.onchange=()=>{
+        song.play()
+        song.currentTime=progress.value
+        contolIcon.classList.add("fa-pause");
+        contolIcon.classList.remove("fa-play");
+    }
+  </script> -->
+</html>
