@@ -1,9 +1,21 @@
 const songs = [
   {
+    title: "KGF Chapter 1 BGM",
+    movieName: "KGF Chapter 1",
+    src: "./Assets/kgf_chapter_1.mp3",
+    image: "./Assets/KGF chapter 1.jpg",
+  },
+  {
     title: "Jailer BGM",
     movieName: "Jailer",
     src: "./Assets/jailer_bgm_hard.mp3",
     image: "./Assets/Jailer Image.jpg",
+  },
+  {
+    title: "KGF Monster BGM",
+    movieName: "KGF Chapter 2",
+    src: "./Assets/monster.mp3",
+    image: "./Assets/KGF chapter 2.jpg",
   },
   {
     title: "Beast BGM",
@@ -82,7 +94,6 @@ document.querySelectorAll(".controls article")[0].onclick = () => {
 };
 
 loadSong(currentSongIndex);
-
 
 song.onended = () => {
   currentSongIndex = (currentSongIndex + 1) % songs.length;
